@@ -80,7 +80,7 @@ on:
         type: string
         description: "Commit SHA of the vcpkg repository to use when building a project."
         required: false
-        default: '501db0f17ef6df184fcdbfbe0f87cde2313b6ab1'
+        default: '06475a351672e6fad52e707b33e30eaf2811d341'
       AE_353_BRANCH:
         type: string
         description: "Name of the branch in current repository that is compatible with 1.6.353 version. By default 353 build is disabled. In order to enable it this input must be set. If 353 is build from main branch you can specify it here."
@@ -287,7 +287,7 @@ jobs:
       HAS_VR: ${{ steps.variants.outputs.HAS_VR }}
       THE_HELL: ${{ steps.variants.outputs.THE_HELL }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: false
 

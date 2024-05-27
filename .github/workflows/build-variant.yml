@@ -67,7 +67,7 @@ jobs:
       PRODUCT_VERSION: ${{ steps.export.outputs.PRODUCT_VERSION }}
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         ref: ${{ inputs.GIT_BRANCH }}
         ssh-key: ${{ secrets.GIT_SSH_KEY }}
@@ -137,7 +137,7 @@ jobs:
         echo "Location: $BINARY_PATH"
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with: 
         name: ${{ steps.export.outputs.ARTIFACT_NAME }}
         if-no-files-found: error
